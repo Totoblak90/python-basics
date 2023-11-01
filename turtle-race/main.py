@@ -16,10 +16,7 @@ for turtle_index in range(0, 6):
     new_turtle.goto(x=-230, y=y_positions[turtle_index])
     turtle_list.append(new_turtle)
 
-is_race_on = False
-
-if user_bet:
-    is_race_on = True
+is_race_on = True
 
 while is_race_on:
     for turtle in turtle_list:
