@@ -9,13 +9,11 @@ def calculate_miles():
     try:
         miles_to_km = round(float(miles_entry.get()) * 1.6, 5)
         km_values_label.config(text=miles_to_km)
-        error_label.config(text="")
         error_label.grid_remove()
     except:
         km_values_label.config(text="NaN")
         error_label.config(text="Only numbers are accepted")
         error_label.grid(column=1, row=4)
-        pass
 
 
 miles_entry = Entry(width=10)
