@@ -3,16 +3,16 @@ with open("./Input/Letters/starting_letter.txt") as starting_letter:
     s_l_content = starting_letter.read()
 
 with open("./Input/Names/invited_names.txt") as names_file:
-    names_list = [name.strip() for name in names_file]
+    names_list = names_file.readlines()
 
 letter_list = []
 
 for name in names_list:
-    new_letter = s_l_content.replace('[name]', name)
+    new_letter = s_l_content.replace('[name]', name.strip())
     letter_list.append(new_letter)
 
 for index, letter in enumerate(letter_list):
-    with open(f"./Output/ReadyToSend/{names_list[index]}.txt", mode="w") as l:
+    with open(f"./Output/ReadyToSend/{names_list[index].strip()}.txt", mode="w") as l:
         l.write(letter)
 
 #for each name in invited_names.txt
