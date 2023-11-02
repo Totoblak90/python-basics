@@ -3,6 +3,8 @@ from tkinter import *
 window = Tk()
 window.title("Km/Miles converter")
 window.config(padx=20, pady=20)
+window.grid_rowconfigure([0, 1, 2, 3], pad=10)
+window.grid_columnconfigure([0, 1, 2], pad=10)
 
 
 def calculate_miles():
